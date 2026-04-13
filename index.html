@@ -89,6 +89,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--cream);bor
 .stat-num{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,5.5rem);font-weight:900;color:var(--terracotta);line-height:1;}
 .stat-bold{font-weight:900;margin-bottom:6px;font-size:0.9rem;letter-spacing:0.05em;}
 .stat-desc{font-size:0.85rem;line-height:1.5;color:#5a3e28;max-width:200px;margin:0 auto;}
+.stat-link-block{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+}
+
+.stat-link-block:hover{
+  opacity:0.85;
+}
+
+.stat-link-block{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+}
+
+.stat-link-block:hover{
+  opacity:0.85;
+}
+
+/* ADD THIS BELOW */
+.stat-link-block::after{
+  content:" ↗";
+  font-size:0.8rem;
+  opacity:0;
+  transition:0.2s;
+}
+
+.stat-link-block:hover::after{
+  opacity:0.6;
+}
 
 /* ============ SECTION 5: THREE PROBLEMS ============ */
 #problems{padding:70px 80px;background:#2d2d10;}
@@ -429,20 +460,26 @@ footer{background:#0f0e06;padding:60px 80px 30px;}
 <section id="stats">
   <div class="stats-grid">
     <div class="stat-item">
-      <div class="stat-num">68%</div>
-      <p class="stat-bold">of India's soil</p>
-      <p class="stat-desc">is deficient in micronutrients due to chemical farming</p>
-    </div>
+  <a href="https://docs.google.com/document/d/16eoE5khnWQK91-TIq-dmLjwoSp5go3Yxzo04MB9CtpY/edit?tab=t.0" target="_blank" class="stat-link-block">
+    <div class="stat-num">Over 50%</div>
+    <p class="stat-bold">of India's soil</p>
+    <p class="stat-desc">deficient in one or more critical micronutrients - a crisis driven by decades of intensive chemical farming</p>
+  </a>
+</div>
     <div class="stat-item">
-      <div class="stat-num">3×</div>
-      <p class="stat-bold">more pesticide residue</p>
-      <p class="stat-desc">found in commercially grown produce than two decades ago</p>
-    </div>
+  <a href="https://docs.google.com/document/d/16eoE5khnWQK91-TIq-dmLjwoSp5go3Yxzo04MB9CtpY/edit?tab=t.71gcc62760l8" target="_blank" class="stat-link-block">
+    <div class="stat-num">3×</div>
+    <p class="stat-bold">more pesticide residue</p>
+    <p class="stat-desc">found in commercially grown produce than two decades ago</p>
+  </a>
+</div>
     <div class="stat-item">
-      <div class="stat-num">1 in 4</div>
-      <p class="stat-bold">Indian children</p>
-      <p class="stat-desc">now show signs of nutritional deficiency despite eating enough calories</p>
-    </div>
+  <a href="https://docs.google.com/document/d/16eoE5khnWQK91-TIq-dmLjwoSp5go3Yxzo04MB9CtpY/edit?tab=t.cepxxj23qaq6" target="_blank" class="stat-link-block">
+    <div class="stat-num">1 in 4</div>
+    <p class="stat-bold">Indian children</p>
+    <p class="stat-desc">now show signs of nutritional deficiency despite eating enough calories</p>
+  </a>
+</div>
   </div>
 </section>
 
