@@ -293,14 +293,113 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--cream);bor
 .btn-ig{background:#1a1a1a;color:#fff;padding:14px 24px;font-size:0.82rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:8px;}
 
 /* ============ SECTION 20: FREE RESOURCE ============ */
-#resource{padding:60px 80px;background:#2e1e0a;}
-.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-.resource-title{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.3rem);font-weight:900;color:#f5f0e8;margin-bottom:16px;}
-.resource-sub{font-size:0.92rem;line-height:1.7;color:rgba(245,240,232,0.7);margin-bottom:28px;}
-.btn-gold{display:inline-block;background:var(--gold);color:#fff;padding:14px 28px;font-size:0.78rem;letter-spacing:0.12em;font-weight:700;text-decoration:none;}
-.resource-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:50px 40px;text-align:center;}
-.resource-card .icon{font-size:1.5rem;margin-bottom:12px;}
-.resource-card p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:rgba(245,240,232,0.6);}
+#resource {
+  padding: 80px 100px;
+  background: linear-gradient(135deg, #2e1e0a, #1f1407);
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.resource-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: #f5f0e8;
+  margin-bottom: 18px;
+}
+
+.resource-sub {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(245,240,232,0.75);
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+
+/* CTA Button Upgrade */
+.btn-gold {
+  display: inline-block;
+  background: linear-gradient(135deg, #c6a85a, #a8893f);
+  color: #fff;
+  padding: 14px 30px;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(198,168,90,0.25);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(198,168,90,0.4);
+}
+
+/* Card Upgrade */
+.resource-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 60px 40px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border-color: rgba(198,168,90,0.4);
+}
+
+.resource-card .icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.resource-card p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: rgba(245,240,232,0.75);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  #resource {
+    padding: 60px 30px;
+  }
+
+  .resource-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .resource-sub {
+    max-width: 100%;
+  }
+
+  .resource-card {
+    padding: 40px 30px;
+  }
+}
+/* Align CTA to center-right */
+.resource-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bigger premium button */
+.big-btn {
+  font-size: 0.9rem;
+  padding: 18px 40px;
+  letter-spacing: 0.15em;
+}
 
 /* ============ SECTION 21: FAQ ============ */
 #faq{padding:80px 80px;background:var(--cream);}
@@ -822,20 +921,27 @@ footer{background:#0f0e06;padding:60px 80px 30px;}
     </div>
   </div>
 </section>
-
 <!-- ===== SECTION 20: FREE RESOURCE ===== -->
 <section id="resource">
   <div class="resource-grid">
+    
+    <!-- LEFT CONTENT -->
     <div>
       <div class="section-label" style="color:var(--green-light);">FREE RESOURCE</div>
       <h2 class="resource-title">Grow Your Own Food<br>at Your Balcony</h2>
-      <p class="resource-sub">A practical guide to starting your first kitchen garden - even if you only have a window sill. Learn soil preparation, seed selection, and natural care methods you can start this weekend.</p>
-      <a href="https://forms.gle/CcwmLDvwbN7JA8e49" target="_blank" class="btn-gold">DOWNLOAD FREE GUIDE →</a>
+      <p class="resource-sub">
+        A practical guide to starting your first kitchen garden — even if you only have a window sill. 
+        Learn soil preparation, seed selection, and natural care methods you can start this weekend.
+      </p>
     </div>
-    <div class="resource-card">
-      <div class="icon">🌿</div>
-      <p>Free Balcony Farming Guide<br>by Aarogya Bhoomi</p>
+
+    <!-- RIGHT CTA (Moved Here) -->
+    <div class="resource-cta">
+      <a href="https://forms.gle/4uY3KwMACXqEJdZr6" target="_blank" class="btn-gold big-btn">
+        DOWNLOAD FREE GUIDE →
+      </a>
     </div>
+
   </div>
 </section>
 
